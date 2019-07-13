@@ -8,6 +8,10 @@
     var answerCorrect;
     var answerWrong;
 
+    for(var i= 0; i <questions.length; 1++){
+
+    }
+
     let questions= [//this is an array of question objects//
         {
             question : "In which town do the Simpsons reside?",
@@ -48,14 +52,50 @@
         },
 
     ];
+            function checkAnswer(answer){ //here is where it check for correct anser//
+                if(anser ==question[runningQuestion].correct){  //this checks within array//
+                    //answer is correct// 
+                    if (runningQuestion < lastQuestion){
+                        runningQuestion++;
+                        renderQuestion();
+                    }
+
+            }
+
+            function answerCorrect(){
+                document.getElementById(runningQuestion);
+                    console.log(answerCorrect);
+            }
+
+            function answerWrong(){
+                document.getElementById(runningQuestion)
+
+            }
+            StaticRange.addEventListener("click.")//add event listener
+
+            function startQuiz(){  //need to create function to start game//
+                startQuiz.style.display="none";
+                renderQuestion();
+            }
+
+
+
+
+
 
          //!this keeps track of the running question//
-         const lastQuestion = questions, length,
+         const lastQuestion = questions, length, -1;//! ahould it be at zero???
          let runningQuestion = "0";   
 
 
          //!next step render the question, so you create a function//
          function renderQuestion (){
+             let q = questions[runningQuestion];
 
+             question.innerhtml = "<p>" + q.question + "</p>";
+             choiceA.innerHTML = q.choiceA;
+             choiceB.innerHTML = q.choiceB;
+             choiceC.innerHTML = q.choiceC; //The innerHTML property is part of the Document Object Model (DOM),allows Js code to manipulate a website being displayed. Specifically, it allows reading and replacing everything within a given DOM element
+console.log(choice)
          }
    
