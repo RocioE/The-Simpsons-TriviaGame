@@ -3,7 +3,7 @@
     // Don't let the player pick more than one answer per question.
     // Don't forget to include a countdown timer.
 
-    var questions= [];//stores all the questions in the test//
+   //stores all the questions in the test//
     var score= 0;//how many questions the user got right//
     var answerCorrect;
     var answerWrong;
@@ -24,21 +24,19 @@
             question : "What is the name of Lisa's jazz mentor?",
             choices : ["Billy Jazzman", "Blind Willy Witherspoon", "Bleeding Gums Murphy"],
             answer: "Bleeding Gums Murphy",
-            
         },
         {
             question : "What is the name of the minister at the First Church of Springfield?",
             choices : ["Ned Flanders", "Timothy Lovejoy", "Carl Carlson"],
             answer: "Timothy Lovejoy",
-
         },
         {
             question : "What is the name of Mr. Burns' teddy bear?",
             choices: ["Nono", "Gogo", "bobo"],
             answer: "Bobo",
         },
-
     ];
+
     function checkAnswer(Useranswer,question){ //here is where it check for correct anser//
         if(Useranswer == question){  //this checks within array//
             console.log("correct")
@@ -46,14 +44,20 @@
 
     }
    
-
+//here we are creating buttons that will contain the questions and answers for each question
     for(var i= 0; i<questions.length; i++){
-      var button=$("<button>");
-      var question= questions [i]
+      var questionbutton=$("<button>");
+      var choicesButton=$("<button>");
+      button.text=questions[i].question;
+      choicesButton.textL=questionbutton[i].choices
+
+      var choices= choices[i];
      // button.attr("data-name",questions[i].choices[i]);
-     var header= $("<h1>").text(question.question)
+     var header= $("<h3>");
+     header.text(question.question)
       console.log(header)
         $("#query").append(header)
+        
         
     }
     
