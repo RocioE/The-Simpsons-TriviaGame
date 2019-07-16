@@ -37,6 +37,7 @@
         },
     ];
 
+console.log(questions[0].choices[0])
     function checkAnswer(Useranswer,question){ //here is where it check for correct anser//
         if(Useranswer == question){  //this checks within array//
             console.log("correct")
@@ -46,20 +47,31 @@
    
 //here we are creating buttons that will contain the questions and answers for each question
     for(var i= 0; i<questions.length; i++){
-      var questionbutton=$("<button>");
-      var choicesButton=$("<button>");
-      button.text=questions[i].question;
-      choicesButton.textL=questionbutton[i].choices
+        var q = questions[i];
+        
+        var questionbutton=$("<button>");
+        var choiceA = $("<button>");
+        var choiceB = $("<button>");
+        var choiceC = $("<button>");
+        choiceA.text(q.choices[0]);
+        choiceB.text(q.choices[1]);
+        choiceC.text(q.choices[2]);
+        
+    // console.log(q);
+    //     questionbutton.text(q.question);
+    //  choicesButton.text(quest.choices)
 
-      var choices= choices[i];
-     // button.attr("data-name",questions[i].choices[i]);
-     var header= $("<h3>");
-     header.text(question.question)
-      console.log(header)
-        $("#query").append(header)
+    // var choices= questions.choices[i];
+    //  button.attr("data-name",questions[i].choices[i]);
+    //      var header= $("<h3>");
+    //  header.text(question.question)
+    //   console.log(header)
+       $("#query").append(q.question)
+       $("#query").append(choiceA)
         
         
     }
+    
     
  
            $("button").on("click", function(){
