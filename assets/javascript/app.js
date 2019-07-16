@@ -67,7 +67,9 @@ console.log(questions[0].choices[0])
     //  header.text(question.question)
     //   console.log(header)
        $("#query").append(q.question)
-       $("#query").append(choiceA)
+       $("#query").append(choiceA);
+       $("#query").append(choiceB);
+       $("#query").append(choiceC);
         
         
     }
