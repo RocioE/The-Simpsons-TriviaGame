@@ -33,7 +33,7 @@
         {
             question : "What is the name of Mr. Burns' teddy bear?",
             choices: ["Nono", "Gogo", "bobo"],
-            answer: "Bobo",
+            answer: "Bobo"
         },
     ];
 
@@ -66,7 +66,7 @@ console.log(questions[0].choices[0])
     //      var header= $("<h3>");
     //  header.text(question.question)
     //   console.log(header)
-       $("#query").append(q.question)
+       $("#query").append(q.question);
        $("#query").append(choiceA);
        $("#query").append(choiceB);
        $("#query").append(choiceC);
