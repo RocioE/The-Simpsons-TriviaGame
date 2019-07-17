@@ -71,15 +71,12 @@ console.log(questions[0].choices[0])
        $("#query").append(choiceB);
        $("#query").append(choiceC);
         
-        
     }
     
     
  
            $("button").on("click", function(){
                $(this).attr("data-name")
-
-
            })
 
             function answerCorrect(){
