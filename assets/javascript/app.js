@@ -15,21 +15,25 @@
             choices : ["Springfield", "Shelbyville", "Seinfeld"],
             answer: "Springfield",
         },
+        
         {
             question : "Who founded the Simpsons' town?",
             choices : ["Jebadiah Springfield", "Zachariah Springfield", "Springfield Manhattan"],
             answer: "Jebadiah Springfield",
         },
+
         {
             question : "What is the name of Lisa's jazz mentor?",
             choices : ["Billy Jazzman", "Blind Willy Witherspoon", "Bleeding Gums Murphy"],
             answer: "Bleeding Gums Murphy",
         },
+
         {
             question : "What is the name of the minister at the First Church of Springfield?",
             choices : ["Ned Flanders", "Timothy Lovejoy", "Carl Carlson"],
             answer: "Timothy Lovejoy",
         },
+
         {
             question : "What is the name of Mr. Burns' teddy bear?",
             choices: ["Nono", "Gogo", "bobo"],
@@ -66,7 +70,9 @@ console.log(questions[0].choices[0])
     //      var header= $("<h3>");
     //  header.text(question.question)
     //   console.log(header)
-       $("#query").append(q.question);
+        var h4 = $("<h4>")
+        h4.text(q.question)
+       $("#query").append(h4);
        $("#query").append(choiceA);
        $("#query").append(choiceB);
        $("#query").append(choiceC);
