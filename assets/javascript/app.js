@@ -3,10 +3,30 @@
     // Don't let the player pick more than one answer per question.
     // Don't forget to include a countdown timer.
 
-   //stores all the questions in the test//
+
+    //starts game by clicking start, its not counting down!!!!////
+    window.onload = function () {
+        $('#start').on('click', function () {
+            game.start();
+            $("#end").show()
+    
+        })
+    
+        $("#end").on('click', function () {
+            //alert("Game Over")
+            game.Game();
+            $("#end").hide()
+            $("#restart").show()   ///game ends and should restart///
+    
+        })
+    }
+
+
+   //stores all the questions in the trivia game//
     var score= 0;//how many questions the user got right//
     var answerCorrect;
     var answerWrong;
+    var counter = 60; ///giving 60sec for player to finish game////
  
 
     var questions= [//this is an array of question objects//
@@ -48,6 +68,16 @@ console.log(questions[0].choices[0])
             }
 
     }
+
+    //var game = {
+        // countdown: function () {
+        //     counter--;
+        //     $('#counter').html(counter);
+        //     if (counter <= 0) {
+        //         alert("Game");
+        //         $("#end").hide()
+        //         $("#restart").show()
+        //         game.done();
    
 //here we are creating buttons that will contain the questions and answers for each question
     for(var i= 0; i<questions.length; i++){
